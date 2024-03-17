@@ -14,10 +14,8 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-                <a class="nav-link" href="?page=nuevo">Nuevo usuario</a>
-                <a class="nav-link" href="?page=listar">Lista de usuarios</a>
-                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                <a class="nav-link ms-4" href="?page=nuevo">Nuevo usuario</a>
+                <a class="nav-link ms-4" href="?page=listar">Lista de usuarios</a>
             </div>
             </div>
         </div>
@@ -34,14 +32,14 @@
                         case "listar":
                             include("listar-usuario.php");
                         break;
-                        case "salvar":
+                        case "guardar":
                             include("guardar-usuario.php");
                         break;
                         case "editar":
                             include("editar-usuario.php");
                         break;
                         default:
-                        print "<h1>Bienvenidos</h1>";
+                            include("listar-usuario.php");
                     }
                 ?>
             </div>

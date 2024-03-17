@@ -11,13 +11,13 @@
             $res = $conn->query($sql);
 
             if($res==true){
-                print "<script>aleert('Registrado con éxito';</acript>";
+                print "<script>alert('Registrado con éxito');</script>";
                 print "<script>location.href='?page=listar';</script>";
             }else{
                 print "<script>alert('No fue posible registrar');</script>;";
-                print "<script>location.href='?page=listar;</script>";
+                print "<script>location.href='?page=listar';</script>";
             }
-        break;
+            break;
         case "editar":
             $nombre = $_POST["nombre"];
             $email = $_POST["email"];
@@ -28,21 +28,34 @@
                 nombre='{$nombre}', 
                 email='{$email}', 
                 clave='{$clave}', 
-                fecha_nac='{$fecha_nac}')
+                fecha_nac='{$fecha_nac}'
                 WHERE
                     id=".$_REQUEST["id"];
 
             $res = $conn->query($sql);
 
             if($res==true){
-                print "<script>aleert('Editado con éxito';</acript>";
+                print "<script>alert('Editado con éxito');</script>";
                 print "<script>location.href='?page=listar';</script>";
             }else{
                 print "<script>alert('No fue posible Editar');</script>;";
-                print "<script>location.href='?page=listar;</script>";
+                print "<script>location.href='?page=listar';</script>";
             }
-        break;
+            break;
+        case "eliminar":
+            $sql = "DELETE FROM usuarios WHERE id=".$_REQUEST["id"];
 
+            $res = $conn->query($sql);
+
+            if($res==true){
+                print "<script>alert('Eliminado con éxito');</script>";
+                print "<script>location.href='?page=listar';</script>";
+            }else{
+                print "<script>alert('No fue posible Eliminar');</script>;";
+                print "<script>location.href='?page=listar';</script>";
+            }
+            
+            break;
     }
 
 ?>

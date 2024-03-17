@@ -4,7 +4,7 @@
     $res = $conn->query($sql);
     $row = $res->fetch_object();
 ?>
-<form action="?page=salvar" method="POST">
+<form action="?page=guardar" method="POST">
     <input type="hidden" name="accion" value="editar">
     <input type="hidden" name="id" value="<?php print $row->id;?>">
     <div class="mb-3">
@@ -17,7 +17,7 @@
     </div>
     <div class="mb-3">
         <label>Clave</label>
-        <input type="current-password" name="clave" value="<?php print $row->clave;?>" class="form-control" require>
+        <input type="current-password" name="clave" class="form-control" require>
     </div>
     <div class="mb-3">
         <label>Fecha de Nacimiento</label>

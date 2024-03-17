@@ -22,8 +22,10 @@
                 print "<td>".$row->email."</td>";
                 print "<td>".$row->fecha_nac."</td>";
             print "<td>
-            <button onclick=\"location.href='?page=editar&id=".$row->id."';\" class='btn btn-danger'>Eliminar</button>
-            <button class='btn btn-success'>Editar</button>
+            <button onclick=\"location.href='?page=editar&id=".$row->id."';\" class='btn btn-success'>Editar</button>
+            <button onclick=\"if(confirm('seguro que desea eliminar?')){location.href='?page=guardar&accion=eliminar&id=".$row->id."';}else{false;}\" class='btn btn-danger'>Eliminar</button>
+
+            
             </td>";
             print "</tr>";
         
