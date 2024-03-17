@@ -9,7 +9,16 @@
             $sql = "INSERT INTO usuarios (nombre, email, clave, fecha_nac) VALUES ('{$nombre}', '{$email}', '{$clave}', '{$fecha_nac}')";
 
             $res = $conn->query($sql);
+
+            if($res==true){
+                print "<script>aleert('Registrado con éxito';</acript>";
+                print "<script>location.href='?page=listar';</script>";
+            }else{
+                print "<script>alert('No fue posible registrar');</script>;";
+                print "<script>location.href='?page=listar;</script>";
+            }
         break;
+
     }
 
 ?>
