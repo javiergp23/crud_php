@@ -39,7 +39,7 @@
                             include("editar-usuario.php");
                         break;
                         default:
-                            include("listar-usuario.php");
+                            include("home.php");
                     }
                 ?>
             </div>

@@ -1,5 +1,5 @@
 <h1>Nuevo usuario</h1>
-<form action="?page=salvar" method="POST">
+<form action="?page=guardar" method="POST">
     <input type="hidden" name="accion" value="guardar">
     <div class="mb-3">
         <label>Nombre</label>
@@ -11,7 +11,7 @@
     </div>
     <div class="mb-3">
         <label>Clave</label>
-        <input type="current-password" name="clave" class="form-control">
+        <input type="password" name="clave" class="form-control">
     </div>
     <div class="mb-3">
         <label>Fecha de Nacimiento</label>
